@@ -39,4 +39,3 @@ This structure allows **fast queries, filtering, and sorting**.
 - Assign users from a dropdown instead of free text.  
 - Improve UI/UX with Material-UI or Tailwind for a more professional look.
 # issue
-# issue-board
