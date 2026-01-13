@@ -6,19 +6,19 @@ import { useNavigate } from "react-router-dom";
 export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); // ✅ hook to navigate
+  const navigate = useNavigate(); 
 
   const handleSignup = async (e) => {
     e.preventDefault();
 
     try {
-      // 1️⃣ Create user
+      // Create user
       await createUserWithEmailAndPassword(auth, email.trim(), password.trim());
 
-      // 2️⃣ Firebase automatically logs in newly created user
+      // firebase automatically logs in newly created user
       alert("Signup successful!");
 
-      // 3️⃣ Redirect to Dashboard
+      //  Redirect to Dashboard
       navigate("/dashboard");
     } catch (err) {
       alert("Signup failed: " + err.message);

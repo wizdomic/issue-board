@@ -10,7 +10,7 @@ export default function IssueForm({ onAdd }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // 1️⃣ Similar Issue Check (basic)
+    // Similar Issue Check (basic)
     const existing = await fetchIssues();
     const similar = existing.filter(i =>
       i.title.toLowerCase().includes(title.toLowerCase().split(" ")[0])
@@ -23,7 +23,7 @@ export default function IssueForm({ onAdd }) {
       if (!confirmCreate) return;
     }
 
-    // 2️⃣ Add issue
+    //Add issue
     await addIssue({ title, description, priority, assignedTo });
 
     // Clear form

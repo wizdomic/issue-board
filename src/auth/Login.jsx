@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); // ✅ hook to navigate programmatically
+  const navigate = useNavigate(); 
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email.trim(), password.trim());
       alert("Login success");
-      navigate("/dashboard"); // ✅ correct way to navigate
+      navigate("/dashboard"); 
     } catch (err) {
       alert("Login failed: " + err.message);
     }
